@@ -19,6 +19,9 @@
 <body>
 {{{body}}}
 </body>
+<footer>
+    <p style="text-align: center;">Developed by the team "insérer-nom-d'équipe" during the "Nuit de l'info 2018"</p>
+</footer>
 <script type="text/javascript">
     $('#jour').change(function () {
         if (this.checked) {
@@ -40,10 +43,78 @@
     }
 
     setInterval("blink(bl)", 500);
-    getWeather(3, 2, console.log)
 </script>
 <script type="text/javascript">
-    getWeather(3, 2, console.log)
+    function remplir_temp(data){
+        var tempbase = data.current.temp_c;
+        document.getElementById("tempbase").innerHTML = "Température Extérieure : "+tempbase+" °C";
+        var vitessevent = data.current.wind_kph;
+        document.getElementById("vitessevent").innerHTML = "Vitesse du vent : "+vitessevent+" Km/h";
+        var hygro = data.current.humidity;
+        document.getElementById("hygro").innerHTML = "Hygrométrie Extérieure : "+hygro+" %";
+        var meteo = data.current.condition.text;
+        document.getElementById("meteo").innerHTML = meteo;
+        var img_meteo = data.current.condition.icon;
+        var img_a_changer = document.getElementById("img_meteo");
+        img_a_changer.src = img_meteo;
+
+        var tempbase1 = data.current.temp_c;
+        document.getElementById("tempbase1").innerHTML = "Température Extérieure : "+tempbase1+" °C";
+        var vitessevent1 = data.current.wind_kph;
+        document.getElementById("vitessevent1").innerHTML = "Vitesse du vent : "+vitessevent1+" Km/h";
+        var hygro1 = data.current.humidity;
+        document.getElementById("hygro1").innerHTML = "Hygrométrie Extérieure : "+hygro1+" %";
+        var meteo1 = data.current.condition.text;
+        document.getElementById("meteo1").innerHTML = meteo1;
+        var img_meteo1 = data.current.condition.icon;
+        var img_a_changer1 = document.getElementById("img_meteo1");
+        img_a_changer1.src = img_meteo1;
+
+        var tempbase2 = data.current.temp_c;
+        document.getElementById("tempbase2").innerHTML = "Température Extérieure : "+tempbase2+" °C";
+        var vitessevent2 = data.current.wind_kph;
+        document.getElementById("vitessevent2").innerHTML = "Vitesse du vent : "+vitessevent2+" Km/h";
+        var hygro2 = data.current.humidity;
+        document.getElementById("hygro2").innerHTML = "Hygrométrie Extérieure : "+hygro2+" %";
+        var meteo2 = data.current.condition.text;
+        document.getElementById("meteo2").innerHTML = meteo2;
+        var img_meteo2 = data.current.condition.icon;
+        var img_a_changer2 = document.getElementById("img_meteo2");
+        img_a_changer2.src = img_meteo2;
+    }
+
+    function remplir_temp_pers(data){
+        var temppers = data.current.temp_c;
+        document.getElementById("temppers").innerHTML = "Température Extérieure : "+temppers+" °C";
+        var vitesseventpers = data.current.wind_kph;
+        document.getElementById("vitesseventpers").innerHTML = "Vitesse du vent : "+vitesseventpers+" Km/h";
+        var hygropers = data.current.humidity;
+        document.getElementById("hygropers").innerHTML = "Hygrométrie Extérieure : "+hygropers+" %";
+        var meteopers = data.current.condition.text;
+        document.getElementById("meteopers").innerHTML = meteopers;
+        var img_meteo_pers = data.current.condition.icon;
+        var img_a_changer = document.getElementById("img_meteo_pers");
+        img_a_changer.src = img_meteo_pers;
+
+        var temppers1 = data.current.temp_c;
+        document.getElementById("temppers1").innerHTML = "Température Extérieure : "+temppers1+" °C";
+        var vitesseventpers1 = data.current.wind_kph;
+        document.getElementById("vitesseventpers1").innerHTML = "Vitesse du vent : "+vitesseventpers1+" Km/h";
+        var hygropers1 = data.current.humidity;
+        document.getElementById("hygropers1").innerHTML = "Hygrométrie Extérieure : "+hygropers1+" %";
+        var meteopers1 = data.current.condition.text;
+        document.getElementById("meteopers1").innerHTML = meteopers1;
+        var img_meteo_pers1 = data.current.condition.icon;
+        var img_a_changer1 = document.getElementById("img_meteo_pers1");
+        img_a_changer1.src = img_meteo_pers1;
+    }
+
+</script>
+<script type="text/javascript">
+    getWeather(-21.7295,15.709417, remplir_temp);
+</script>
+<script type="text/javascript">
+    getWeather(-21.420667,14.991806, remplir_temp_pers);
 </script>
 
 

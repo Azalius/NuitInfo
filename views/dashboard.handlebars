@@ -34,24 +34,23 @@
             </div>
             <div class="col-md-4">
                 <i id="bl" style="visibility: visible; font-size: 100px; color: red" class="plop fas fa-heartbeat">
-                    85</i>
+                    87</i>
             </div>
         </div>
         <div class="row">
             <div class="col-md-7" style="padding: 0">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.0192775059168!2d15.71649331512245!3d-21.725562002249614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQzJzMyLjAiUyAxNcKwNDMnMDcuMyJF!5e1!3m2!1sfr!2sfr!4v1544142273373"
-                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.1412955750284!2d14.989629315116412!3d-21.42065399191536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDI1JzE0LjQiUyAxNMKwNTknMzAuNSJF!5e1!3m2!1sfr!2sfr!4v1544162614866" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Température : 72°C</p>
-                        <p>Vitesse du vent : 30Km/h</p>
-                        <p>Hygrométrie : 2%</p>
+                        <p id="temppers"></p>
+                        <p id="vitesseventpers"></p>
+                        <p id="hygropers"></p>
                     </div>
                     <div class="col-md-6">
-                        <p>Grand soleil</p>
-                        <i style="font-size: 70px; color: yellow" class="fas fa-sun"></i>
+                        <p id="meteopers"></p>
+                        <img id="img_meteo_pers"/>
                     </div>
                 </div>
             </div>
@@ -62,12 +61,11 @@
             <div class="col-md-4">
                 <p>Base : {{{base.id}}}</p>
                 <p>Pression Intérieur : {{{base.pression}}}hPa</p>
-                <p>Température Intérieur : {{{base.temperature}}}°C</p>
+                <p>Température Intérieure : {{{base.temperature}}}°C</p>
             </div>
             <div class="col-md-4">
                 <p>Nom : {{{base.nom}}}</p>
-                <p>Hygrométrie : {{{base.hygrometrie}}}%</p>
-                <p>Température Extérieur : {{{base.temperature}}}°C</p>
+                <p>Hygrométrie Intérieure : {{{base.hygrometrie}}}%</p>
             </div>
             <div class="col-md-4">
                 <i style="font-size: 70px; color: green" class="far fa-check-circle"></i>
@@ -82,13 +80,13 @@
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Température : 66°C</p>
-                        <p>Vitesse du vent : 35Km/h</p>
-                        <p>Hygrométrie : 10%</p>
+                        <p id="tempbase"></p>
+                        <p id="vitessevent"></p>
+                        <p id="hygro"></p>
                     </div>
                     <div class="col-md-6">
-                        <p>Temps nuageux</p>
-                        <i style="font-size: 70px; color: grey" class="fas fa-cloud-sun"></i>
+                        <p id="meteo"></p>
+                        <img id="img_meteo"/>
                     </div>
                 </div>
             </div>
@@ -103,7 +101,7 @@
                 <p>Nom : {{{vehicule.nom}}}</p>
                 <p>Poids : {{{vehicule.poids}}}T</p>
                 <p>Puissance : {{{vehicule.puissance}}}CV</p>
-                <p>Capacité : {{{vehicule.capacite_max}}}</p>
+                <p>Capacité : {{{vehicule.charge_max}}}</p>
             </div>
             <div class="col-md-6">
                 <p>Chargement du frêt</p>
@@ -120,19 +118,18 @@
         </div>
         <div class="row">
             <div class="col-md-7" style="padding: 0">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.492571328018!2d15.707228015122514!3d-21.729495002383825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQzJzQ2LjIiUyAxNcKwNDInMzMuOSJF!5e1!3m2!1sfr!2sfr!4v1544137272459"
-                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.1412955750284!2d14.989629315116412!3d-21.42065399191536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDI1JzE0LjQiUyAxNMKwNTknMzAuNSJF!5e1!3m2!1sfr!2sfr!4v1544162614866" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-6" style="padding-right: 0">
-                        <p>Température : 66°C</p>
-                        <p>Vitesse du vent : 35Km/h</p>
-                        <p>Hygrométrie : 10%</p>
+                        <p id="temppers1"></p>
+                        <p id="vitesseventpers1"></p>
+                        <p id="hygropers1"></p>
                     </div>
                     <div class="col-md-6">
-                        <p>Temps nuageux</p>
-                        <i style="font-size: 70px; color: grey" class="fas fa-cloud-sun"></i>
+                        <p id="meteopers1"></p>
+                        <img id="img_meteo_pers1"/>
                     </div>
                 </div>
             </div>
@@ -141,7 +138,7 @@
     <div class="card border-dark col-md-4">
         <div class="row">
             <div class="col-md-6">
-                <p>Véhicule : 002</p>
+                <p>Véhicule : 2</p>
                 <p>Nom : YETU</p>
                 <p>Poids : 1.7T</p>
                 <p>Puissance : 67CV</p>
@@ -162,19 +159,19 @@
         </div>
         <div class="row">
             <div class="col-md-7" style="padding: 0">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.0192775059168!2d15.71649331512245!3d-21.725562002249614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQzJzMyLjAiUyAxNcKwNDMnMDcuMyJF!5e1!3m2!1sfr!2sfr!4v1544142273373"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.492571328018!2d15.707228015122514!3d-21.729495002383825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQzJzQ2LjIiUyAxNcKwNDInMzMuOSJF!5e1!3m2!1sfr!2sfr!4v1544137272459"
                         width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-6" style="padding-right: 0">
-                        <p>Température : 72°C</p>
-                        <p>Vitesse du vent : 30Km/h</p>
-                        <p>Hygrométrie : 2%</p>
+                        <p id="tempbase1"></p>
+                        <p id="vitessevent1"></p>
+                        <p id="hygro1"></p>
                     </div>
                     <div class="col-md-6">
-                        <p>Grand soleil</p>
-                        <i style="font-size: 70px; color: yellow" class="fas fa-sun"></i>
+                        <p id="meteo1"></p>
+                        <img id="img_meteo1"/>
                     </div>
                 </div>
             </div>
@@ -183,7 +180,7 @@
     <div class="card border-dark col-md-4">
         <div class="row">
             <div class="col-md-6">
-                <p>Véhicule : 003</p>
+                <p>Véhicule : 3</p>
                 <p>Nom : PGZT</p>
                 <p>Poids : 0.5T</p>
                 <p>Puissance : 38CV</p>
@@ -210,13 +207,13 @@
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-md-6" style="padding-right: 0">
-                        <p>Température : 66°C</p>
-                        <p>Vitesse du vent : 35Km/h</p>
-                        <p>Hygrométrie : 10%</p>
+                        <p id="tempbase2"></p>
+                        <p id="vitessevent2"></p>
+                        <p id="hygro2"></p>
                     </div>
                     <div class="col-md-6">
-                        <p>Temps nuageux</p>
-                        <i style="font-size: 70px; color: grey" class="fas fa-cloud-sun"></i>
+                        <p id="meteo2"></p>
+                        <img id="img_meteo2"/>
                     </div>
                 </div>
             </div>

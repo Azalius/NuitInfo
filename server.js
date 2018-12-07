@@ -1,16 +1,16 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const routes = require('./routes/routes.js');
+let express = require('express'),
+    exphbs = require('express-handlebars');
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/src/index.html'));
-});
+let app = express();
 
-app.use('/api', routes);
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 app.use('/ressources', express.static('ressources'));
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!')
+let DashboardController = require("./controllers/DashboardController");
+app.get('/', DashboardController.Test);
+
+app.listen(3000, function () {
+    console.log('express-handlebars example server listening on: 3000');
 });

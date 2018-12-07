@@ -8,8 +8,11 @@
 	  	<title>Seul sur NAMIB</title>
 	  	<!-- Bootstrap core CSS -->
 	  	<link href="../ressources/bootstrap.min.css" rel="stylesheet">
-	  	<link href="../ressources/style.css" rel="stylesheet">
+	  	<link href="../ressources/nightmode.css" rel="stylesheet">
 	  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	</head>
 
 	<body>
@@ -32,6 +35,16 @@
 					</div>
 					<div class="col-md-2">
 						<p>SLEVIN</p>
+
+						<div class="switch">
+					     <label>
+					       Jour
+					       <input type="checkbox" id="jour">
+					       <span class="lever"></span>
+					       Nuit
+					     </label>
+					   </div>
+
 					</div>
 				</div>
 			</div>
@@ -45,16 +58,16 @@
 			            <p>Prenom : Stéphane</p>
 			        </div>
 	      			<div class="col-md-4">
-	        			<script> 
-							function blink(ob){ 
-								if (ob.style.visibility == "visible" ){ 
-									ob.style.visibility = "hidden"; 
-								} 
-								else{ 
-									ob.style.visibility = "visible"; 
-								} 
+	        			<script>
+							function blink(ob){
+								if (ob.style.visibility == "visible" ){
+									ob.style.visibility = "hidden";
+								}
+								else{
+									ob.style.visibility = "visible";
+								}
 							}
-							setInterval("blink(bl)",500); 
+							setInterval("blink(bl)",500);
 						</script>
 	            		<i id="bl" style="visibility: visible; font-size: 100px; color: red" class="plop fas fa-heartbeat"> 85</i>
 	      			</div>
@@ -154,7 +167,7 @@
 	      					</div>
 	      				</div>
 				    </div>
-		      	</div>		    
+		      	</div>
 		    </div>
 		</div>-->
 		<div class="row m-2">
@@ -338,6 +351,17 @@
 	      		</div>
 	  		</div>
 	  	</div>-->
+			<script type="text/javascript">
+			$('#jour').change(function() {
+			 if(this.checked) {
+				 $("body").addClass('n-body');
+				 $(".card").addClass('n-card');
+			 } else {
+				 $("body").removeClass('n-body');
+				 $(".card").removeClass('n-card');
+			 }
+		});
+			</script>
 	</body>
 
 </html>

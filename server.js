@@ -9,6 +9,7 @@ app.set('view engine', 'handlebars');
 app.use('/ressources', express.static('ressources'));
 
 let DashboardController = require("./controllers/DashboardController");
+app.get('/:id', DashboardController.GetPersonne);
 app.get('/', DashboardController.GetPersonne);
 
 app.listen(3000, function () {

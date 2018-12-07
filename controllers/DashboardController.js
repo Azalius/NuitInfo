@@ -1,6 +1,6 @@
 const modeldashboard = require("../models/dashboard");
 
-module.exports.Test = function (request, response) {
+module.exports.GetPersonne = function (request, response) {
     response.title = 'Seul dans l\'AMIB';
     modeldashboard.getPersonne(1, function (err, result) {
         if (err) {
@@ -11,3 +11,6 @@ module.exports.Test = function (request, response) {
         response.render('dashboard', response);
     });
 };
+
+module.exports.GetBase
+module.exports.GetVehicule

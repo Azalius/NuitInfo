@@ -14,12 +14,12 @@ module.exports.GetDashboard = function (request, response) {
             },
             function (callback) {
                 modeldashboard.getBase(1, function (err, result) {
-                    callback(err, result[1]);
+                    callback(err, result[0]);
                 });
             },
             function (callback) {
                 modeldashboard.getVehicule(1, function (err, result) {
-                    callback(err, result[2]);
+                    callback(err, result[0]);
                 });
             },
         ],

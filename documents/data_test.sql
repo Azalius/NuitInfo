@@ -58,3 +58,6 @@ VALUES ("ALERTE A LA BOMBE NUCLÉAIRE", 10);
 
 insert into alerte(type, heure, position)
 VALUES (1, "22:00:00", 4);
+
+insert into base (position, nom, capacite, temperature, hygrometrie, pression)
+VALUES (2, "Une base random", 15, 23, 30, 1024);

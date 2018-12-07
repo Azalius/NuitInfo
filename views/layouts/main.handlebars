@@ -116,6 +116,16 @@
 <script type="text/javascript">
     getWeather(-21.420667,14.991806, remplir_temp_pers);
 </script>
-
+<script type="text/javascript">
+    var now = new Date;
+    var annee   = now.getFullYear();
+    var mois    = now.getMonth() + 1;
+    var jour    = now.getDate();
+    var heure   = now.getHours();
+    var minute  = now.getMinutes();
+    var seconde = now.getSeconds();
+    document.getElementById("heureact").innerHTML = heure+":"+minute+":"+seconde;
+    document.getElementById("dateact").innerHTML = jour+"/"+mois+"/"+annee;
+</script>
 
 </html>

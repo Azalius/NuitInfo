@@ -45,14 +45,18 @@
 			            <p>Prenom : Stéphane</p>
 			        </div>
 	      			<div class="col-md-4">
-	        			<div class="row">
-	          				<div class="col-md-6">
-	            				<p>85</p>
-	          				</div>
-	          				<div class="col-md-6">
-	            				<i style="font-size: 100px; color: red" class="fas fa-heartbeat"></i>
-	          				</div>
-	        			</div>
+	        			<script> 
+							function blink(ob){ 
+								if (ob.style.visibility == "visible" ){ 
+									ob.style.visibility = "hidden"; 
+								} 
+								else{ 
+									ob.style.visibility = "visible"; 
+								} 
+							}
+							setInterval("blink(bl)",500); 
+						</script>
+	            		<i id="bl" style="visibility: visible; font-size: 100px; color: red" class="plop fas fa-heartbeat">85</i>
 	      			</div>
 	      		</div>
 	      		<div class="row">

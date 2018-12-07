@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 var express = require('express');
 var router = express.Router();
 //const connection = require('../db/db')
+=======
+const express = require('express');
+const router = express.Router();
+>>>>>>> fee0801e3b6ead0abc1d1b5ed969e74e2e8797e5
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({

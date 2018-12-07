@@ -7,7 +7,7 @@ module.exports.Test = function (request, response) {
             console.log(err);
             return;
         }
-        response.test = result[0];
+        response.personne = result[0];
         response.render('dashboard', response);
     });
 };

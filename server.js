@@ -9,8 +9,8 @@ app.set('view engine', 'handlebars');
 app.use('/ressources', express.static('ressources'));
 
 let DashboardController = require("./controllers/DashboardController");
-app.get('/:id', DashboardController.GetPersonne);
-app.get('/', DashboardController.GetPersonne);
+app.get('/:id', DashboardController.GetDashboard);
+app.get('/', DashboardController.GetDashboard);
 
 app.listen(3000, function () {
     console.log('express-handlebars example server listening on: 3000');
